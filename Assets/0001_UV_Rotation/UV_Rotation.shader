@@ -1,4 +1,6 @@
-﻿Shader "/UV/Rotation"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "/UV/Rotation"
 {
 	Properties
 	{
@@ -26,7 +28,7 @@
 	v2f vert(appdata_base v)
 	{
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 
 		// Pivot
 		float2 pivot = float2(0.5, 0.5);

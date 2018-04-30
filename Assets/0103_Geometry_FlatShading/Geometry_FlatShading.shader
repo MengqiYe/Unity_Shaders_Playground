@@ -1,4 +1,6 @@
-﻿Shader "Geometry/FlatShading"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Geometry/FlatShading"
 {
 	Properties
 	{
@@ -41,7 +43,7 @@
 	{
 		v2g o;
 		o.vertex = v.vertex;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		o.uv = v.texcoord;
 		return o;
 	}
