@@ -1,4 +1,4 @@
-﻿Shader "Unlit/UV_Stars"
+﻿Shader "UV/Stars"
 {
 	Properties
 	{

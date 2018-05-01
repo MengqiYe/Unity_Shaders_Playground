@@ -1,4 +1,4 @@
-﻿Shader "Unlit/UV_Water"
+﻿Shader "UV/Water"
 {
 	Properties
 	{
