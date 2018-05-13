@@ -8,12 +8,13 @@
 		_R("Radius", range(0,1)) = 0.1
 		_S("Speed", range(0,5)) = 1
 	}
-		SubShader
+
+	SubShader
 	{
 		Tags{ "RenderType" = "Opaque" }
 		LOD 100
 
-		Pass
+	Pass
 	{
 		CGPROGRAM
 #pragma vertex vert
@@ -23,7 +24,7 @@
 
 #include "UnityCG.cginc"
 
-		struct appdata
+	struct appdata
 	{
 		float4 vertex : POSITION;
 		float2 uv : TEXCOORD0;
@@ -33,7 +34,7 @@
 	{
 		float2 uv : TEXCOORD0;
 		UNITY_FOG_COORDS(1)
-			float4 vertex : SV_POSITION;
+		float4 vertex : SV_POSITION;
 	};
 
 	sampler2D _MainTex;
